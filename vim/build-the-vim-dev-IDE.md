@@ -145,5 +145,17 @@ set number
 
 9.安装好插件，请用代码库中的[vimrc](https://github.com/smilefish1987/devtips/blob/master/vim%2Fvimrc)文件替换自己的~/.vimrc文件
 
+10.替换完后就可以开心的写代码了，上几张图：
 
+![](../images/vim6.jpg?raw=true)
+
+自动提示补全
+
+![](../images/vim7.jpg?raw=true)
+
+使用了Tab键的效果
+
+![](../images/vim8.png?raw=true)
+
+使用ctrlp的效果
 
