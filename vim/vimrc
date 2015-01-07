@@ -1,0 +1,238 @@
+set nocompatible
+
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+
+"Plugin 'fatih/vim-go'
+
+Plugin 'Shougo/neocomplete.vim'
+
+Plugin 'majutsushi/tagbar'
+
+Plugin 'vim-scripts/taglist.vim'
+
+Plugin 'scrooloose/nerdtree'
+
+Plugin 'kien/ctrlp.vim'
+
+Plugin 'airblade/vim-gitgutter'
+
+Plugin 'shawncplus/phpcomplete.vim'
+
+Plugin 'ervandew/supertab'
+"Plugin 'Shougo/neosnippet.vim'
+
+Plugin 'Lokaltog/vim-powerline'
+
+call vundle#end()
+
+filetype plugin indent on
+
+syntax on
+
+colorscheme molokai 
+set number
+
+"let g:go_snippet_engine = "neosnippet"
+set t_Co=256
+set laststatus=2
+set encoding=utf-8
+set guifont=PowerlineSymbols\ for\ Powerline
+set fillchars+=stl:\ ,stlnc:\
+let g:Powerline_symbols='unicode'
+let g:go_disable_autoinstall=0
+let g:neocomplete#enable_at_startup = 1
+let g:tagbar_ctags_bin= '/usr/bin/ctags'
+map <C-n> :NERDTreeToggle<CR>
+
+let g:tagbar_type_go = {
+			\'ctagstype' : 'go',
+			\'kinds': [
+			\'p:package',
+			\'i:imports:1',
+			\'c:constants',
+			\'v:variables',
+			\'t:types',
+			\'n:interfaces',
+			\'w:fields',
+			\'e:embedded',
+			\'m:methods',
+			\'r:constructor',
+			\'f:functions'
+			\],
+			\'sro' : '.',
+			\'kind2scope' : {
+			\'t' : 'ctype',
+			\'n' : 'ntype'
+			\},
+			\'scope2kind' : {
+			\'ctype' : 't',
+			\'ntype' : 'n'
+			\},
+			\'ctagsbin': 'gotags',
+			\'ctagsargs' : '-sort -silent' 
+			\}
+
+map <F8> :TagbarToggle<CR>
+
+au FileType php set omnifunc=phpcomplete#CompletePHP
+let g:phpcomplete_relax_static_constraint = 0
+let g:phpcomplete_complete_for_unknown_classes = 1
+let g:phpcomplete_search_tags_for_variables = 1
+let g:phpcomplete_min_num_of_chars_for_namespace_completion = 2
+let g:phpcomplete_parse_docblock_comments = 1
+let g:phpcomplete_cache_taglists = 1
+let g:phpcomplete_enhance_jump_to_definition = 1
+let g:phpcomplete_mappings = {
+   \ 'jump_to_def': ',g',
+   \ 'jump_to_def_split': '<C-W><C-]>',
+   \ 'jump_to_def_vsplit': '<C-W><C-\>',
+   \}
+   
+" 是否高亮显示当前标签
+let Tlist_Auto_Highlight_Tag = 1
+
+" " 自动打开Tlist
+let Tlist_Auto_Open = 0
+
+" " 自动更新Tlist
+let Tlist_Auto_Update = 1
+
+" " 选择标签或文件后是否自动关闭标签列表窗口
+let Tlist_Close_On_Select = 0
+
+" " 压缩方式
+let Tlist_Compact_Format = 1
+
+" " 是否在标签列表窗口用标签原型替代标签名
+let Tlist_Display_Prototype = 0
+
+" " 在标签名后是否显示标签有效范围
+let Tlist_Display_Tag_Scope = 1
+
+" " 不显示折叠树
+let Tlist_Enable_Fold_Column = 0
+
+" " 关闭VIM同时关闭Tlist
+let Tlist_Exit_OnlyWindow = 1
+
+" " 不关闭其他的tags
+let Tlist_File_Fold_Auto_Close = 0
+" 为1则使用TlistToggle打开标签列表窗口后会获焦点至于标签列表窗口；为0则taglist打开后焦点仍保持在代码窗口
+let Tlist_GainFocus_On_ToggleOpen = 1
+
+" " 显示标签列表窗口时允许/禁止扩展Vim窗口宽度
+let Tlist_Inc_Winwidth = 0
+
+" " F12开关Tlist
+nnoremap <F11> :TlistToggle<CR>
+
+" " 设置ctags运行的位置
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+
+" " 设置tags文件目录
+set tags=/tmp/php/tags
+
+" " F12生成/更新tags文件
+function! UpdateTagsFile()
+     silent !ctags -R --fields=+ianS --extra=+q
+endfunction
+nmap <F12> :call UpdateTagsFile()<CR>
+
+set helplang=cn 
+
+set foldcolumn=4
+
+set foldopen=all
+
+set foldmethod=syntax
+
+set foldmethod=indent
+
+set foldmethod=marker
+
+set nobackup
+
+set nowb
+
+set history=10000
+
+"set t_vb
+
+set matchtime=4
+
+set hidden
+
+set list
+
+set nocp
+
+set noswapfile
+set bufhidden=hide
+
+set linespace=0
+
+set wildmenu
+
+set backspace=2
+
+set whichwrap+=<,>,h,l
+
+set shortmess=atl
+
+set report=0
+
+set noerrorbells
+
+set fillchars+=stl:\ ,stlnc:\
+
+set autoread
+
+set lbr
+
+set tw=0
+
+set showmatch
+
+set ignorecase
+
+set nohlsearch 
+
+set listchars=tab:>-,trail:-
+
+set scrolloff=3
+
+set novisualbell
+
+set incsearch
+
+set ai
+
+set wrap
+
+set foldlevel=50
+
+au FileType html,python,vim,javascript,tpl setl shiftwidth=2 
+au FileType html,python,vim,javascript,tpl setl tabstop=2   
+
+au FileType java,php setl shiftwidth=4
+au FileType java,php setl tabstop=4 
+
+set expandtab
+
+set smartindent
+
+set cindent
+
+set autoindent
+
+set autochdir
+
+let g:gitgutter_avoid_cmd_prompt_on_windows = 0
+
+let g:SuperTabDefaultCompletionType="<C-n>"
+let g:SuperTabContextDefaultCompletionType="<C-n>"
+
