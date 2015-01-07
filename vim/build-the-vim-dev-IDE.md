@@ -18,17 +18,18 @@
 
 ``` shell
 
-a.$cd /etc/apt
-b.$sudo mv sources.list sources.list.backup
-c.$sudo vim sources.list
-d.在文件中输入下面搜狐的源的内容：
+cd /etc/apt
+sudo mv sources.list sources.list.backup
+sudo vim sources.list
+在文件中输入下面搜狐的源的内容：
 
   deb http://mirrors.sohu.com/ubuntu/ trusty multiverse universe restricted main
   deb http://mirrors.sohu.com/ubuntu/ trusty-updates multiverse universe restricted main
   deb http://mirrors.sohu.com/ubuntu/ trusty-backports multiverse universe restricted main
   deb http://mirrors.sohu.com/ubuntu/ trusty-security multiverse universe restricted main
   deb http://mirrors.sohu.com/ubuntu/ trusty-proposed multiverse universe restricted main
-f.$sudo apt-get update
+
+sudo apt-get update
 
 ```
 
