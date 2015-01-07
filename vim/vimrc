@@ -14,6 +14,10 @@ Plugin 'majutsushi/tagbar'
 
 Plugin 'vim-scripts/taglist.vim'
 
+Plugin 'godlygeek/tabular'
+
+Plugin 'plasticboy/vim-markdown'
+
 Plugin 'scrooloose/nerdtree'
 
 Plugin 'kien/ctrlp.vim'
@@ -236,3 +240,7 @@ let g:gitgutter_avoid_cmd_prompt_on_windows = 0
 let g:SuperTabDefaultCompletionType="<C-n>"
 let g:SuperTabContextDefaultCompletionType="<C-n>"
 
+let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_no_default_key_mappings=1
+let g:vim_markdown_math=1
+let g:vim_markdown_frontmatter=1
