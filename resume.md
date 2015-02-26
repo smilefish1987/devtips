@@ -49,12 +49,12 @@
 
 以下均为我熟练使用的技能
 
-- Web开发：PHP/Node/python/golang
-- Web框架：ThinkPHP/Yii/django/revel/beego
-- Web环境：Linux/nginx/jenkins
-- 前端框架：Extjs/jquery
-- 数据库相关：MySQL/SQLite/redis/mongodb/memcache
-- 版本管理、文档和自动化部署工具：Svn/Git/Composer
+- Web开发：PHP/Node/Python/Golang
+- Web框架：ThinkPHP/Yii/Django/Revel/Beego
+- Web环境：Linux/Nginx
+- 前端框架：Extjs/Jquery
+- 数据库相关：MySQL/SQLite/Redis/Mongodb/Memcache
+- 版本管理、文档和自动化部署工具：Svn/Git/Composer/Jenkins
 - 单元测试：PHPUnit
 - 开放平台：微博开放平台/微信应用开发
 
