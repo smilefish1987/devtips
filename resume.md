@@ -51,8 +51,8 @@
 
 - Web开发：PHP/Node/python/golang
 - Web框架：ThinkPHP/Yii/django/revel/beego
-- Web环境: linux/nginx/jenkins
-- 前端框架：extjs/jquery
+- Web环境：Linux/nginx/jenkins
+- 前端框架：Extjs/jquery
 - 数据库相关：MySQL/SQLite/redis/mongodb/memcache
 - 版本管理、文档和自动化部署工具：Svn/Git/Composer
 - 单元测试：PHPUnit
