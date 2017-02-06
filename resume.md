@@ -14,8 +14,8 @@
  - 微博：[@holos_he](http://weibo.com/smilefish1987)
  - 博客：http://smilefish1987.github.io
  - Github：http://github.com/smilefish1987
- - 现有职位：软件研发工程师
- - 现有职级：百度 T5
+ - 当前岗位：软件研发
+ - 当前职级：百度 T5
  - 期望职位：PHP/C++ 高级研发工程师
  - 期望城市：深圳
 
